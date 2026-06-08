@@ -1,0 +1,117 @@
+/* =============================================
+   INSTRUCTOR.CSS — Instructor profile card
+   ============================================= */
+
+.instructor-card-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.instructor-card {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 40px;
+    align-items: center;
+    overflow: hidden;
+    padding: 45px;
+}
+
+/* ── Photo ── */
+.instructor-image-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--glass-border);
+    aspect-ratio: 1;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    background: #090e1a;
+}
+
+.instructor-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.instructor-card:hover .instructor-image-container img { transform: scale(1.05); }
+
+.instructor-glow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(3, 7, 18, 0.8) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* ── Info ── */
+.instructor-info { text-align: right; }
+
+.instructor-title-desc {
+    font-size: 1.05rem;
+    color: var(--primary-light);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+.instructor-name {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: linear-gradient(to left, #FFF, var(--primary-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+}
+
+.instructor-bio {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+/* ── Social buttons ── */
+.instructor-socials { display: flex; gap: 15px; }
+
+.social-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--primary-light);
+    background: rgba(19, 185, 253, 0.1);
+    transform: translateY(-3px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .instructor-card {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    .instructor-image-container {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .instructor-info    { text-align: center; }
+    .instructor-socials { justify-content: center; }
+}

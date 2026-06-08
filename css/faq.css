@@ -1,0 +1,73 @@
+/* =============================================
+   FAQ.CSS — Accordion FAQ items
+   ============================================= */
+
+.faq-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ── Single item ── */
+.faq-item {
+    background: var(--dark-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active {
+    border-color: var(--primary-light);
+    background: var(--dark-card-hover);
+}
+
+/* ── Question button ── */
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    text-align: right;
+    padding: 22px 30px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-ar);
+}
+
+/* ── Answer panel ── */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0 30px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 1000px;
+    transition: max-height 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+.faq-answer-inner {
+    padding: 20px 0 25px 0;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* ── Chevron icon ── */
+.faq-icon {
+    font-size: 1rem;
+    color: var(--primary-light);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon { transform: rotate(180deg); }

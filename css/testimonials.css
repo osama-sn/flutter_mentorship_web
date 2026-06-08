@@ -1,0 +1,106 @@
+/* =============================================
+   TESTIMONIALS.CSS — Slider / carousel section
+   ============================================= */
+
+.testimonials-slider {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.testimonial-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* 3 slides */
+}
+
+.testimonial-slide {
+    width: 33.333%;
+    padding: 0 15px;
+}
+
+/* ── Single review card ── */
+.testi-inner-card {
+    background: var(--dark-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 40px;
+    position: relative;
+}
+
+.testi-inner-card i.quote-mark {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 3rem;
+    color: var(--primary-light);
+    opacity: 0.08;
+}
+
+.testi-stars {
+    color: #F59E0B;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.testi-text {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+/* ── User info row ── */
+.testi-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.testi-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-light);
+    background: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: var(--primary-light);
+    font-family: var(--font-en);
+    flex-shrink: 0;
+}
+
+.testi-user-details h4   { font-size: 1.05rem; font-weight: 700; }
+.testi-user-details span { font-size: 0.85rem; color: var(--text-secondary); }
+
+/* ── Dot navigation ── */
+.testimonials-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.nav-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.nav-dot.active {
+    background: var(--primary-light);
+    width: 25px;
+    border-radius: 10px;
+}
