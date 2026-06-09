@@ -90,3 +90,23 @@ footer {
     .footer-grid   { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; text-align: center; }
 }
+
+@media (max-width: 480px) {
+    footer {
+        padding: 42px 16px 32px 16px;
+    }
+
+    .footer-grid {
+        gap: 30px;
+        margin-bottom: 36px;
+    }
+
+    .footer-contact-item {
+        align-items: flex-start;
+    }
+
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -20,6 +20,8 @@
     overflow: hidden;
     border: none;
     font-family: var(--font-ar);
+    max-width: 100%;
+    text-align: center;
 }
 
 /* Shine sweep effect */
@@ -152,6 +154,17 @@
 }
 
 @media (max-width: 480px) {
+    .btn {
+        width: 100%;
+        padding: 13px 18px;
+        font-size: 0.98rem;
+    }
+
+    .glass-card {
+        padding: 24px 18px;
+        border-radius: 18px;
+    }
+
     .wa-floating-fab {
         bottom: 20px;
         left: 20px;

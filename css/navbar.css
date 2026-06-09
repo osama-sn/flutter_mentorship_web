@@ -34,6 +34,7 @@ header.scrolled {
     align-items: center;
     padding: 12px 30px;
     width: 100%;
+    gap: 16px;
 }
 
 /* ── Logo ── */
@@ -46,6 +47,11 @@ header.scrolled {
     font-weight: 800;
     font-size: 1.25rem;
     transition: transform 0.3s ease;
+    min-width: 0;
+}
+
+.logo span {
+    white-space: nowrap;
 }
 
 .logo:hover {
@@ -195,5 +201,43 @@ header.scrolled {
 
     .nav-btn-wrapper {
         display: none; /* Hidden on tablet, shown inside dropdown or CTA */
+    }
+}
+
+@media (max-width: 480px) {
+    header,
+    header.scrolled {
+        top: 10px;
+        width: calc(100% - 24px);
+        border-radius: 18px;
+    }
+
+    .nav-container {
+        padding: 10px 12px;
+    }
+
+    .logo {
+        gap: 8px;
+        font-size: 0.95rem;
+    }
+
+    .logo-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        font-size: 1.15rem;
+    }
+
+    .hamburger {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+    }
+
+    .nav-menu {
+        border-radius: 18px;
+        padding: 16px;
+        max-height: calc(100vh - 92px);
+        overflow-y: auto;
     }
 }

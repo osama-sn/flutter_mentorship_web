@@ -65,6 +65,7 @@
     display: flex;
     gap: 15px;
     direction: ltr;
+    flex-wrap: wrap;
 }
 
 .timer-box {
@@ -95,6 +96,38 @@
 @media (max-width: 991px) {
     .countdown-banner { flex-direction: column; text-align: center; }
     .timer-boxes { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .countdown-banner {
+        padding: 26px 16px;
+        border-radius: 22px;
+        gap: 22px;
+    }
+
+    .countdown-text {
+        flex-basis: auto;
+    }
+
+    .countdown-text h3 {
+        font-size: 1.25rem;
+    }
+
+    .timer-boxes {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        gap: 10px;
+    }
+
+    .timer-box {
+        min-width: 0;
+        padding: 12px 8px;
+    }
+
+    .timer-val {
+        font-size: 1.45rem;
+    }
 }
 
 
@@ -224,6 +257,41 @@
 @media (max-width: 991px) {
     .solution-container { grid-template-columns: 1fr; gap: 50px; }
     .solution-image-box { order: -1; }
+}
+
+@media (max-width: 480px) {
+    .solution-container {
+        gap: 34px;
+    }
+
+    .solution-image-box {
+        padding: 16px;
+        border-radius: 22px;
+    }
+
+    .solution-glow-card {
+        padding: 26px 18px;
+        border-radius: 18px;
+    }
+
+    .solution-glow-card i.main-icon {
+        font-size: 2.6rem;
+    }
+
+    .solution-glow-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .solution-item {
+        gap: 14px;
+    }
+
+    .solution-num-badge {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        font-size: 0.9rem;
+    }
 }
 
 
@@ -433,6 +501,39 @@
     .timeline-badge { right: 0px !important; left: auto !important; }
 }
 
+@media (max-width: 480px) {
+    .roadmap-timeline {
+        padding: 12px 0;
+    }
+
+    .roadmap-timeline::before {
+        right: 14px;
+    }
+
+    .timeline-item {
+        padding: 16px 34px 16px 0;
+    }
+
+    .timeline-badge {
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        right: 0 !important;
+        font-size: 0.85rem;
+        border-width: 2px;
+    }
+
+    .timeline-month {
+        font-size: 1.05rem;
+        line-height: 1.4;
+        align-items: flex-start;
+    }
+
+    .timeline-list li {
+        font-size: 0.9rem;
+    }
+}
+
 
 /* ========== CAREER ========== */
 .career-container {
@@ -486,6 +587,20 @@
 @media (max-width: 991px) { .career-container { grid-template-columns: 1fr; } }
 @media (max-width: 480px)  { .career-grid       { grid-template-columns: 1fr; } }
 
+@media (max-width: 480px) {
+    .career-content h3 {
+        font-size: 1.35rem;
+    }
+
+    .career-content p {
+        font-size: 1rem;
+    }
+
+    .career-tag-card {
+        padding: 16px;
+    }
+}
+
 
 /* ========== AUDIENCE ========== */
 .audience-container {
@@ -523,6 +638,18 @@
 .audience-not .audience-list li i { color: #EF4444; font-size: 1.2rem; }
 
 @media (max-width: 991px) { .audience-container { grid-template-columns: 1fr; } }
+
+@media (max-width: 480px) {
+    .audience-box h3 {
+        font-size: 1.22rem;
+        align-items: flex-start;
+    }
+
+    .audience-list li {
+        padding: 15px 16px;
+        align-items: flex-start;
+    }
+}
 
 
 /* ========== BENEFITS / PROGRAM INCLUDES ========== */

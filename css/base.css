@@ -29,6 +29,11 @@
     scroll-behavior: smooth;
 }
 
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--dark-bg);
     color: var(--text-primary);
@@ -36,6 +41,24 @@ body {
     overflow-x: hidden;
     line-height: 1.8;
     position: relative;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+span,
+li,
+strong {
+    overflow-wrap: anywhere;
 }
 
 .en-text {
@@ -135,6 +158,20 @@ body {
 /* ── Responsive ── */
 @media (max-width: 768px) {
     .section-padding {
-        padding: 80px 5% 40px 5%;
+        padding: 80px 5% 48px 5%;
+    }
+
+    .section-header {
+        margin-bottom: 42px;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-padding {
+        padding: 68px 16px 42px 16px;
     }
 }

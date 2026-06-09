@@ -80,6 +80,10 @@
 .testi-user-details h4   { font-size: 1.05rem; font-weight: 700; }
 .testi-user-details span { font-size: 0.85rem; color: var(--text-secondary); }
 
+.testi-user-details {
+    min-width: 0;
+}
+
 /* ── Dot navigation ── */
 .testimonials-controls {
     display: flex;
@@ -103,4 +107,33 @@
     background: var(--primary-light);
     width: 25px;
     border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+    .testimonials-slider {
+        padding: 10px 0;
+    }
+
+    .testimonial-slide {
+        padding: 0 6px;
+    }
+
+    .testi-inner-card {
+        padding: 26px 18px;
+        border-radius: 18px;
+    }
+
+    .testi-inner-card i.quote-mark {
+        top: 18px;
+        left: 18px;
+        font-size: 2.2rem;
+    }
+
+    .testi-text {
+        font-size: 0.98rem;
+    }
+
+    .testi-user {
+        align-items: flex-start;
+    }
 }
